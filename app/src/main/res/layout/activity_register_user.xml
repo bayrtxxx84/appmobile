@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".presentation.activities.RegisterUser">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="24dp">
+
+            <!-- Avatar circular -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="84dp"
+                android:layout_height="84dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="#E0F2FE"
+                app:cardCornerRadius="52dp"
+                app:cardElevation="0dp"
+                app:strokeColor="#BAE6FD"
+                app:strokeWidth="1dp">
+
+                <ImageView
+                    android:id="@+id/ivAvatar"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="Avatar de usuario"
+                    android:src="@android:drawable/ic_dialog_info"
+                    app:tint="#0284C7" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Código de Usuario -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilCodigoUsuario"
+                style="@style/InputTextApp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:hint="Código de Usuario">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCodigoUsuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapCharacters"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Nivel de Usuario -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:text="Nivel de Usuario"
+                android:textColor="#334155"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/toggleNivelUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:checkedButton="@+id/btnNivelAdmin"
+                app:selectionRequired="true"
+                app:singleSelection="true">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnNivelAdmin"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Administrador"
+                    app:cornerRadius="12dp"
+                    app:strokeColor="#CBD5E1" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnNivelUsuario"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Usuario"
+                    app:cornerRadius="12dp"
+                    app:strokeColor="#CBD5E1" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <!-- Contraseña -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPassword"
+                style="@style/InputTextApp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:hint="Contraseña"
+                app:endIconMode="password_toggle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Confirmar Contraseña -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilConfirmPassword"
+                style="@style/InputTextApp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:hint="Confirmar Contraseña"
+                app:endIconMode="password_toggle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etConfirmPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Nombres -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilNombres"
+                style="@style/InputTextApp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:hint="Nombres">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etNombres"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName|textCapWords"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Apellidos -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilApellidos"
+                style="@style/InputTextApp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:hint="Apellidos">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etApellidos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName|textCapWords"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Tipo de Documento + N° de Documento -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:text="Tipo de documento"
+                android:textColor="#334155"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/menu"
+                style="?attr/textInputFilledExposedDropdownMenuStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tipo de documento">
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoComplete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!-- Sexo -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:text="Sexo"
+                android:textColor="#334155"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/toggleSexo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:checkedButton="@+id/btnSexoMasculino"
+                app:selectionRequired="true"
+                app:singleSelection="true">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSexoMasculino"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Masculino"
+                    app:cornerRadius="12dp"
+                    app:strokeColor="#CBD5E1" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSexoFemenino"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Femenino"
+                    app:cornerRadius="12dp"
+                    app:strokeColor="#CBD5E1" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <!-- Teléfono -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilTelefono"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:hint="Teléfono"
+                app:boxBackgroundColor="#FFFFFF"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxStrokeColor="#0284C7">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etTelefono"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- E-mail -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilEmail"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:hint="E-mail"
+                app:boxBackgroundColor="#FFFFFF"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxStrokeColor="#0284C7">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Acciones: Registrar, Limpiar, Cancelar -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnRegistrar"
+                    style="@style/Widget.Material3.Button"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1.15"
+                    android:backgroundTint="#0284C7"
+                    android:text="Registrar"
+                    android:textColor="#FFFFFF"
+                    app:cornerRadius="24dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnLimpiar"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_weight="0.95"
+                    android:backgroundTint="#E0F2FE"
+                    android:text="Limpiar"
+                    android:textColor="#0369A1"
+                    app:cornerRadius="24dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCancelar"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:text="Cancelar"
+                    android:textColor="#334155"
+                    app:cornerRadius="24dp"
+                    app:strokeColor="#CBD5E1" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

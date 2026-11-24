@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name" translatable="false">FirstApp</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Bienvenido First Fragment</string>
+    <string name="second_fragment">Bienvenido Second Fragment</string>
+</resources>

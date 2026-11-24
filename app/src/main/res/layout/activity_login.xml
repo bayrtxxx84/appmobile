@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.activities.Login">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/banner" />
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/MyCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="182dp"
+        android:layout_marginLeft="@dimen/lateral"
+        android:layout_marginRight="@dimen/lateral"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="10dp"
+        app:layout_constraintTop_toTopOf="@+id/imageView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/lateral"
+            android:layout_marginTop="@dimen/superior"
+            android:layout_marginRight="@dimen/lateral"
+            android:layout_marginBottom="@dimen/superior"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/superior"
+                android:fontFamily="@font/playpen_sans_semibold"
+                android:gravity="center"
+                android:text="@string/login"
+                android:textSize="32sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="?attr/textInputFilledStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/username"
+                app:startIconDrawable="@drawable/login_24_ic">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="?attr/textInputFilledStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/superior"
+                android:hint="@string/password"
+                app:passwordToggleEnabled="true"
+                app:startIconDrawable="@drawable/account_box_24_ic">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtPass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/switchAdmin"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/superior"
+                android:layout_gravity="center"
+                android:text="Es admin?"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/superior"
+                android:gravity="right"
+                android:text="Forget your password?"
+                android:textColor="@color/textos" />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Boton"
+                android:id="@+id/boton1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/account_box_24_ic"
+                android:drawableTint="@color/white"
+                android:text="LOGIN" />
+
+
+            <TextView
+                android:id="@+id/texto1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/playpen_sans_semibold"
+                android:gravity="center"
+                android:text="Dont have an account? Sign up" />
+
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
